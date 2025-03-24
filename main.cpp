@@ -23,6 +23,10 @@ int main(){
     case language::CPlusPlus :{
         system("code CPlusPlus.cpp");
         break;
+    case language::Python: {
+        system("code Python.py");
+        break;
+    }
     }
     default:
     cout << "Неверный ввод"<<endl;

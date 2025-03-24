@@ -28,7 +28,7 @@ bool second_task(string line){
     
 }  
 int main(){
-    cout << "Введите модуль \n 1 \n 2 \n 3"<<endl;
+    cout << "Введите модуль \n 1 - 1.3 \n 2 - 2.9 \n 3 - 3.19"<<endl;
     int menu;
     cin >> menu;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');;
