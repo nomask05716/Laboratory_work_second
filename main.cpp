@@ -27,6 +27,10 @@ int main(){
         system("code Python.py");
         break;
     }
+    case language::cSharp: {
+        system("code /home/nomask786/Laboratory_work_second/CSharp/Program.cs");
+        break;
+    }
     }
     default:
     cout << "Неверный ввод"<<endl;

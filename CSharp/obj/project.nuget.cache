@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "oPzB5H5W+DM=",
+  "success": true,
+  "projectFilePath": "/home/nomask786/Laboratory_work_second/CSharp/CSharp.csproj",
+  "expectedPackageFiles": [
+    "/home/nomask786/.nuget/packages/microsoft.net.illink.tasks/9.0.3/microsoft.net.illink.tasks.9.0.3.nupkg.sha512",
+    "/home/nomask786/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/9.0.3/microsoft.netcore.app.runtime.linux-x64.9.0.3.nupkg.sha512",
+    "/home/nomask786/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/9.0.3/microsoft.aspnetcore.app.runtime.linux-x64.9.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,15 @@
+/home/nomask786/Laboratory_work_second/CSharp/bin/Debug/net9.0/CSharp
+/home/nomask786/Laboratory_work_second/CSharp/bin/Debug/net9.0/CSharp.deps.json
+/home/nomask786/Laboratory_work_second/CSharp/bin/Debug/net9.0/CSharp.runtimeconfig.json
+/home/nomask786/Laboratory_work_second/CSharp/bin/Debug/net9.0/CSharp.dll
+/home/nomask786/Laboratory_work_second/CSharp/bin/Debug/net9.0/CSharp.pdb
+/home/nomask786/Laboratory_work_second/CSharp/obj/Debug/net9.0/CSharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/nomask786/Laboratory_work_second/CSharp/obj/Debug/net9.0/CSharp.AssemblyInfoInputs.cache
+/home/nomask786/Laboratory_work_second/CSharp/obj/Debug/net9.0/CSharp.AssemblyInfo.cs
+/home/nomask786/Laboratory_work_second/CSharp/obj/Debug/net9.0/CSharp.csproj.CoreCompileInputs.cache
+/home/nomask786/Laboratory_work_second/CSharp/obj/Debug/net9.0/CSharp.sourcelink.json
+/home/nomask786/Laboratory_work_second/CSharp/obj/Debug/net9.0/CSharp.dll
+/home/nomask786/Laboratory_work_second/CSharp/obj/Debug/net9.0/refint/CSharp.dll
+/home/nomask786/Laboratory_work_second/CSharp/obj/Debug/net9.0/CSharp.pdb
+/home/nomask786/Laboratory_work_second/CSharp/obj/Debug/net9.0/CSharp.genruntimeconfig.cache
+/home/nomask786/Laboratory_work_second/CSharp/obj/Debug/net9.0/ref/CSharp.dll
