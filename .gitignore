@@ -1,3 +1,5 @@
 workspace.code-workspace
 CSharp/
 .vscode/
+main
+CPlusPlus
