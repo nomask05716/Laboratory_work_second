@@ -51,7 +51,7 @@ class Program
                     while (true)
                     {
                         Console.WriteLine("Введите строку");
-                        line = Console.ReadLine()?.ToLower() ?? "";
+                        line = Console.ReadLine()?? "";
                         bool valid = true;
                         foreach (char symbol in line)
                         {
@@ -69,15 +69,14 @@ class Program
                 
                 case 3:
                 {
-                    Console.WriteLine("Введите числа");
-                    string input = Console.ReadLine() + " "; // Добавляем пробел для обработки последнего числа
+                    Console.Write("\nВведите числа через пробел \n");
+                    string input = (Console.ReadLine() ?? "") + " ";
                     int currentNumber = 0;
                     bool isNegative = false;
                     bool isBuildingNumber = false;
                     bool first = true;
                     int previousNumber = 0;
                     int count = 0;
-                    bool lastIsZero = false;
                     bool error = false;
 
                     foreach (char c in input)
@@ -91,30 +90,29 @@ class Program
                         {
                             isNegative = true;
                         }
-                        else if (c == ' ' || c == '\t' || c == '\n')
+                        else if (char.IsWhiteSpace(c))
                         {
-                            if (isBuildingNumber)
+                            if (isBuildingNumber || isNegative)
                             {
+                                if (isNegative && !isBuildingNumber)
+                                {
+                                    error = true;
+                                    break;
+                                }
+
                                 if (isNegative)
                                     currentNumber = -currentNumber;
-                    
-                                int num = currentNumber;
-                    
-                                if (num == 0)
-                                    lastIsZero = true;
-                                else
-                                    lastIsZero = false;
 
                                 if (first)
                                 {
-                                    previousNumber = Math.Abs(num);
+                                    previousNumber = Math.Abs(currentNumber);
                                     first = false;
                                 }
                                 else
                                 {
-                                    if (Math.Abs(num) == previousNumber)
+                                    if (Math.Abs(currentNumber) == previousNumber)
                                         count++;
-                                    previousNumber = Math.Abs(num);
+                                    previousNumber = Math.Abs(currentNumber);
                                 }
 
                                 currentNumber = 0;
@@ -129,10 +127,14 @@ class Program
                         }
                     }
 
-                    if (error || lastIsZero)
-                        Console.WriteLine("Ошибка! Неверный ввод");    
+                    if (error || first)
+                    {
+                        Console.WriteLine("\nОшибка ввода!");
+                    }
                     else
-                        Console.WriteLine($"Количество чисел равных предыдущему = {count}");
+                    {
+                        Console.WriteLine($"\nКоличество чисел, равных по модулю предыдущему: {count}\n");
+                    }
                     break;
                 }
                 
@@ -141,25 +143,38 @@ class Program
 
                     Console.WriteLine("Неверный ввод!");
                     move = false; 
-                    Process.Start("./bin/Release/net9.0/linux-x64/CSharp");
+                    Main();
                     break;
                 }
             }
 
             if (move)
             {
-                Console.WriteLine("\nВернуться в меню? (1 - Да, 0 - Нет)");
-                if (int.TryParse(Console.ReadLine(), out int choice)){
-                    if (choice == 1){
-                        Process.Start("code", "/home/nomask786/Laboratory_work_second/main.cpp");
-                    }
-                }
-                else if (choice == 0)
+                Console.WriteLine("\nВернуться в меню? (1 - Да, 2 - Нет)");
+                if (int.TryParse(Console.ReadLine(), out int choice))
+                {
+                    if (choice == 1)
                     {
-                        Process.Start("./bin/Release/net9.0/linux-x64/CSharp");
+                        Process.Start("code", "/home/nomask776/Laboratory_work_second/main.cpp");
+                        move = false;
+                        break;
                     }
+                    else if (choice == 2)
+                    {
+                        move = false;
+                        Main();
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Неверный ввод!");
+                    }
+                }   
+                else
+                {
+                    Console.WriteLine("Неверный ввод! Введите число");
+                }     
             }
-            
             Console.Clear();
         }
     }
