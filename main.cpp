@@ -28,13 +28,21 @@ int main(){
         break;
     }
     case language::cSharp: {
-        system("code /home/nomask786/Laboratory_work_second/CSharp/Program.cs");
+        system("code /home/nomask776/CSharp/Program.cs");
+        break;
+    }
+    case language::Typescript: {
+        system("code /home/nomask776/Typescript/src/index.ts");
+        break;
+    }
+    case language::JavaScript: {
+        system("code /home/nomask776/Javascript/src/index.js");
         break;
     }
     }
     default:
     cout << "Неверный ввод"<<endl;
-        system("./main");
+        system("code main.cpp");
         break;
     }
 }

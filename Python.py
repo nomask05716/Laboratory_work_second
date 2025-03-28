@@ -8,6 +8,8 @@ def second_task(line):
     return required.issubset(line_set) and ' ' not in required
 def main():
     script_name = sys.argv[0]  # Получаем имя текущего скрипта
+    python_cmd="/usr/bin/python3"
+    Move = True
     while True:
         try:
             print("Выберите модуль:\n1 - 1.3\n2 - 2.9\n3 - 3.19")
@@ -47,11 +49,23 @@ def main():
                     prev = abs(num)
                 print(f"Количество чисел равных предыдущему: {count}")
                 move = True
-            print("\nВернуться в главное меню?\n1 - Да\n2 - Нет")
-            if int(input()) == 1:
-                os.system("code /home/nomask786/Laboratory_work_second/main.cpp")
             else:
-                os.system(f"python {script_name}")
+                print("Неверный ввод")
+                os.system(f"code /home/nomask776/Laboratory_work_second/Python.py")
+                Move = False
+            while (Move):
+                print("\nВернуться в главное меню?\n1 - Да\n2 - Нет")
+                choise = input()
+                if choise == "1":
+                    os.system("code /home/nomask776/Laboratory_work_second/main.cpp")
+                    Move = False
+                elif choise == "2":
+                    os.system(f"code /home/nomask776/Laboratory_work_second/Python.py")
+                    Move = False
+                else:
+                    print("Неверный ввод")
+                    os.system(f"code /home/nomask776/Laboratory_work_second/Python.py")
+                    Move = False
             return
 
         except ValueError:
