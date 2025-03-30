@@ -1,3 +1,5 @@
 # .gitattributes
 *.cs linguist-detectable=true
 *.cs linguist-language=C#
+*.kt linguist-detectable=true
+*.kt linguist-language=Kotlin-fuck-you
