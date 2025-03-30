@@ -28,15 +28,27 @@ int main(){
         break;
     }
     case language::cSharp: {
-        system("code /home/nomask776/CSharp/Program.cs");
+        system("code /home/nomask776/CSharp");
         break;
     }
     case language::Typescript: {
-        system("code /home/nomask776/Typescript/src/index.ts");
+        system("code /home/nomask776/Typescript");
         break;
     }
     case language::JavaScript: {
-        system("code /home/nomask776/Javascript/src/index.js");
+        system("code /home/nomask776/Javascript");
+        break;
+    }
+    case language::Ruby:{
+        system("code /home/nomask776/ruby");
+        break;
+    }
+    case language::Kotlin: {
+        system("code /home/nomask776/my-kotlin-debug");
+        break;
+    }
+    case language::Go:{
+        system("code /home/nomask776/go");
         break;
     }
     }

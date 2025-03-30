@@ -98,7 +98,7 @@ int main(){
         if (number == 0){
             cout << "Ошибка!Невырный ввод"<<endl;
             move = false;
-            system("code CPlusPlus.cpp");
+            system("code CPlusPlus.cpp");;
         }else   cout << "Количество чисел равных предыдущему = " <<count<< endl;
         
         break;
@@ -106,7 +106,7 @@ int main(){
     default:
         cout << "Невверный ввод"<<endl;
         move = false;
-        system("code CPlusPlus.cpp");
+        main();
         break;
         
     }
@@ -118,7 +118,7 @@ int main(){
             system("code main.cpp");
             move = false;
         }else if (move_menu ==2){ 
-            system("code CPlusPlus.cpp");
+            main();
             move = false;
         }else{
             cout<<"Невверный ввод"<<endl;
