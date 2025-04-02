@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
-    cout << "Введите ЯП \n 1 - С++ \n 2 - Kotlin \n 3 - C# \n 4 - PHP \n 5 - Rust \n 6 - Go (Goland) \n 7 - Typescript \n 8 - Swift \n 9 - JavaScript \n 10 - Python \n 11 - Java \n 12 - Ruby"<<endl;
+    cout << "Введите ЯП \n 1 - С++ \n 2 - Kotlin \n 3 - C# \n 4 - PHP \n 5 - Rust \n 6 - Go (Goland) \n 7 - Typescript \n 8 - Swift \n 9 - JavaScript \n 10 - Python \n 11 - Java \n 12 - Ruby \n 13 - Assembly"<<endl;
     int menu_language;
     cin >> menu_language;
     enum language{
@@ -17,6 +17,7 @@ int main(){
         Python,
         Java,
         Ruby,
+        Assembly,
     };
     switch (menu_language)
     {
@@ -51,10 +52,18 @@ int main(){
         system("code /home/nomask776/go");
         break;
     }
+    case language::Assembly:{
+        system("as assembly.s -o asm.o && ld asm.o -o Assembly && ./Assembly");
+        break;
+    }
+    case language::Java:{
+        system("code /home/nomask776/java");
+        break;
+    }
     }
     default:
     cout << "Неверный ввод"<<endl;
-        system("code main.cpp");
+        main();
         break;
     }
 }
