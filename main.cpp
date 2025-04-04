@@ -24,6 +24,7 @@ int main(){
     case language::CPlusPlus :{
         system("code CPlusPlus.cpp");
         break;
+    }
     case language::Python: {
         system("code Python.py");
         break;
@@ -60,6 +61,17 @@ int main(){
         system("code /home/nomask776/java");
         break;
     }
+    case language::Rust:{
+        system("code /home/nomask776/rust");
+        break;
+    }
+    case language::PHP:{
+        system("code /home/nomask776/php");
+        break;
+    }
+    case language::Swift:{
+        system("code /home/nomask776/swift");
+        break;
     }
     default:
     cout << "Неверный ввод"<<endl;
